@@ -98,6 +98,12 @@
 
         setTimeout(() => alert.classList.add('hide'), 1500);
       }
+
+      //Toggle Nav Tray Visibility
+      ipcRenderer.on('nav:toggle', () => {
+        const nav = document.getElementById('nav');
+        nav.classList.toggle('hide');
+      });
     </script>
   </body>
 </html>

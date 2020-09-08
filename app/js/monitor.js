@@ -43,7 +43,9 @@ setInterval(() => {
 
   //CPU Free
   cpu.free().then((info) => {
-    document.getElementById('cpu-free').innerHTML = info + '%';
+    info = +info;
+
+    document.getElementById('cpu-free').innerHTML = info.toFixed(2) + '%';
   });
 
   //Uptime
